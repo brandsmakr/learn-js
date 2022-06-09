@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS strings | strings and strings methods</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro natus dolor ipsam ad? Laboriosam corrupti incidunt culpa fuga ipsa amet impedit quidem corporis.</p>
+    </div>
+
+
+
+
+    <script>
+
+        var name = 'talha';
+        // console.log(name);
+        
+        // template litterals
+        var temp = `${name}`;
+        console.log(temp)
+        var channel = "my channel's";
+        var newTemp = `${channel} name is ${name}`;
+        console.log(newTemp);
+
+        // length of string
+        var length = name.length;
+        console.log(`The length of my name is : ${length}`);
+
+        // escape sequence (\n = new line) & (\t = space) & (\b = question mark)
+        console.log("Hello world\nHarry\tand\bbee");
+
+
+        // new method to take a string in array
+        var y = new String("this");
+        console.log(y);
+
+        document.getElementById('content').innerHTML = "<h3>This is 3rd string heading by inserted from javascript</h3>";
+
+
+    </script>
+
+
+</body>
+</html>

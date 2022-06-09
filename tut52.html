@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    
+    <div class="container">
+        simple html
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        // objects
+        let employee = {
+            name: "talha",
+            salary: 10,
+            channel: "CodeWithTalha",
+            channel2: 'programmingWithTalha',
+            'channel 3' : 'developmentWithTalha'
+        }
+        console.log(employee);
+        console.log(employee.channel);
+        console.log(employee['channel2']);
+        // console.log(employee.channel 3); // error got we can't use this
+        console.log(employee['channel 3']);
+
+        // js arrays
+        let name = [1, 2, 3, "Talha", undefined];
+        console.log(name);
+        console.log(name[3]);
+
+        // new array object
+        let names = new Array("zeeshan","fasih", "talha", "ruhan");
+        console.log(names);
+        // length of array
+        console.log(names.length);
+        // sorting of an array
+        names = names.sort();
+        console.log(names);
+        // add an element in array
+        names.push("hasseb");
+        console.log(names);
+
+        let new_names = new Array(23);
+        console.log(new_names);
+        new_names.push = 'talha';
+        new_names.push = 'fasih';
+        console.log(new_names);
+
+
+
+    </script>
+
+
+
+</body>
+</html>

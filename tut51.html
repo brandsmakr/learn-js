@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope & condition in javascript</title>
+</head>
+<body>
+    
+
+        <div>
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+                <li>item-5</li>
+                <li>item-6</li>
+                <li>item-7</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <script>
+
+            var string1 = "This is a string 1";
+            var string1 = "This is a string 2";
+            console.log(string1);
+
+
+            // let  is a block level scope
+            let a ="u";
+            // let a ="u6"; // error got
+            {
+                a="sd"; //never gaves error because using in blocks
+            }
+            console.log(a);
+
+            const b = "This value can not be changed";
+            // b = "I want to channed"; // gaves error
+            console.log(b);
+
+            let age = 15;
+            if(age>18)
+            {
+                console.log("you can drink");
+            }
+            else if(age == 12)
+            {
+                console.log("you can make drink");
+            }
+            else if(age > 12)
+            {
+                console.log("you can make drink for olders");
+            }
+            else
+            {
+                console.log("you can't drink");
+            }
+
+            const cups = 45;
+            switch(cups)
+            {
+                case 45:
+                    console.log('the values of cups is 45');
+                    // break;
+                case 42:
+                    console.log('the values of cups is 42');
+                    // break;
+                default:
+                    console.log(`the values of cups is ${cups}`);
+                    // break;
+            }
+
+
+
+        </script>
+
+
+
+
+
+</body>
+</html>

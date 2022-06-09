@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js String Functions</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var str = "this is a string";
+        console.log(str);
+        
+        // checking index or position of a word in string
+        var position = str.indexOf("is"); // indexOf gives only first occurence substring
+        console.log(position);
+
+        // last occuracnce of a subString
+        position = str.lastIndexOf("is");
+        console.log(position);
+
+        // sub string from a string
+        var substr = str.slice(1,6); 
+        console.log(substr);
+
+        substr = str.slice(0,8); // it also takes negative values
+        console.log(substr);
+
+        // Another method of slice
+        substr = str.substring(0,12); // it will not take negative values
+        console.log(substr)
+
+        // replace a word in string
+        var replace = str.replace('string', 'developer');
+        console.log(str);
+        console.log(replace);
+
+        // convert string to upper case
+        console.log(str.toUpperCase());
+        // convert string to lower case
+        console.log(str.toLowerCase());
+
+        // concatenate two strings
+        var newString = str.concat('new string');
+        console.log(newString);
+
+        var strWithWhiteSpaces = "    this            contains          with          spaces       ";
+        console.log(strWithWhiteSpaces);
+        // remove white spaces from start and end
+        console.log(strWithWhiteSpaces.trim());
+
+        // check on which index has a chracter in string
+        var char3 = str.charAt(2);
+        console.log(char3);
+
+        // fives character code of a indexed chracter
+        var char2 = str.charCodeAt(2); // not very important
+        console.log(char2);
+
+        // string slicing using arrays
+        console.log(str[3]);
+
+
+
+    </script>
+</body>
+</html>
