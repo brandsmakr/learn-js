@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+
+
+    <div class="container">
+        This is arrow function.
+    </div>
+
+
+
+
+
+
+    <script>
+
+        function greet()
+        {
+            console.log('this is a normal function');
+        }
+        // greet();
+
+        let gree = ()=>{
+            console.log('this is a arrow function');
+        }
+        gree();
+
+        setTimeout(()=>{
+            greet();
+        }, 2000);
+
+        let sum = (a, b)=>{
+            return a+b;
+        }
+        console.log(sum(2, 3));
+
+        let sum2 = (a,b)=> a+b;
+        console.log(sum2(4, 6));
+
+        let half = a => a/2;
+        console.log(half(32));
+
+        let newGreet = ()=> console.log('good morning new greet');
+        newGreet();
+
+        let obj  = {
+            greetings: "Good Morning",
+            names: ["Talha", "haris", "bilal", "fasih"] ,
+            speak()
+            {
+                this.names.forEach((students)=>{
+                    console.log(this.greetings , students);
+                });
+                this.names.forEach( function s (students)
+                {
+                    console.log('this is not working in noemal function & only works in arrow function so, undefined');
+                    console.log(this.greetings , students); 
+                });
+            }
+        }
+
+        obj.speak();
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

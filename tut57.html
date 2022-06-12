@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+</head>
+<style>
+    #btn{
+        padding: 10px 34px;
+        background-color: aqua;
+        color: blueviolet;
+        border: 1px solid slateblue;
+        border-radius: 12px;
+        cursor: pointer;
+        
+    }
+    .container{
+        padding: 30px 320px;
+    }
+    .w-100{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
+<body>
+    
+    Browser Events:
+    1- click
+    2- context menu
+    3- mouseover/mouseout
+    4- mousedown/mouseup
+    5- mouse move
+    <!-- form events -->
+    6- submit
+    7- focus
+    <!-- DOM events-->
+    8- DOMContentLoaded
+    <!-- transition events -->
+    9- transition end
+
+    <div class="container">
+        <h1>This is event handling hading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dicta laborum earum illum sit repellendus expedita minima eveniet est dolores error cum unde atque quae distinctio non iusto soluta ab nemo incidunt maxime at aspernatur. Quos ex blanditiis culpa officia quis quaerat quasi dolorem quisquam.</p>
+    </div>
+    <div class="w-100">
+        <button id="btn" onclick="toggle_hide()">Hide</button>
+    </div>
+
+
+    <script>
+        var para = document.getElementById("para");
+        para.addEventListener('mouseover', function run(){
+            alert('mouse inside');
+            console.log('mouse inside');
+        });
+        para.addEventListener('mouseout', function run(){
+            alert('mouse outside');
+            console.log('mouse outside');
+        });
+
+        function toggle_hide()
+        {
+            var btn = document.getElementById("btn");
+
+            if(para.style.display != 'none')
+            {
+                para.style.display = 'none';
+                btn.innerHTML = 'Show';
+                console.log('paragraph hide');
+            }
+            else
+            {
+                para.style.display = 'block';
+                btn.innerHTML = 'Hide';
+                console.log("paragraph show");
+            }
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in js</title>
+</head>
+<body>
+
+
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>Contact us</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+
+        let main = document.getElementById("main");
+        console.log(main);
+
+        let nav = document.getElementById("nav");
+        console.log(nav);
+
+        let container = document.getElementsByClassName('container');
+        console.log(container);
+
+        let sel = document.querySelector('.container');
+        console.log("sector returns ", sel);
+
+        // let nav_li = document.querySelector("#nav>li");
+        // console.log(nav_li);
+
+        let nav_li = document.querySelectorAll("#nav>li");
+        console.log(nav_li);
+
+
+
+
+    </script>
+    
+</body>
+</html>

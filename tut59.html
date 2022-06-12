@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time & Date in js</title>
+</head>
+<style>
+    #time{
+        width: 100%;
+        padding: 30px 0px;
+        background-color: aqua;
+        color: purple;
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        This is a container
+    </div>
+
+
+    <h3 id="time"></h3>
+
+
+    <script>
+
+        let now = new Date();
+        console.log(now);
+
+        let dt = new Date(0);
+        console.log(dt);
+
+        let newdt = new Date(200000);
+        console.log(newdt);
+
+        let newDate = new Date("2029-09-22");
+        console.log(newDate);
+
+        // let toNewDate = new Date(year, month, date, hours, miutes, seconds, miliSeconds);
+        let toNewDate = new Date(2020, 6, 2, 14, 50, 45, 50);
+        console.log(toNewDate);
+
+        let year = toNewDate.getFullYear();
+        console.log("Year is ", year);
+
+        let date = toNewDate.getDate();
+        console.log("date is ",date);
+
+        let month = toNewDate.getMonth();
+        console.log("month is ", month);
+
+        let hours = toNewDate.getHours();
+        console.log("hours is ", hours);
+
+        toNewDate.setDate(5);
+        toNewDate.setMinutes(34);
+        console.log("date is changed new is " , toNewDate);
+
+        // console.log(Date.now);
+
+        let time = document.getElementById('time');
+        setInterval(updateTime, 1000);
+        function updateTime()
+        {
+            time.innerHTML = new Date();
+        }
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
